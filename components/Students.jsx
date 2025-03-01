@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
+import { QuoteIcon, UserIcon } from 'lucide-react';
 import { useState } from 'react';
-import { FaUser, FaQuoteLeft } from 'react-icons/fa'; // Import icons from react-icons
 
 const students = [
   {
@@ -82,7 +82,8 @@ export default function StudentGrid() {
             <div className="text-white text-center sm:text-left">
               {/* Student Name with Icon */}
               <div className="flex items-center mb-2">
-                <FaUser className="mr-2 text-lg sm:text-xl" /> {/* User Icon */}
+                <UserIcon className="mr-2 text-lg sm:text-xl" />{' '}
+                {/* User Icon */}
                 <h3 className="text-xl sm:text-2xl font-bold">
                   {selectedStudent.name}
                 </h3>
@@ -90,7 +91,7 @@ export default function StudentGrid() {
 
               {/* Student Saying with Icon */}
               <div className="flex items-start">
-                <FaQuoteLeft className="mr-2 text-lg sm:text-xl mt-1" />{' '}
+                <QuoteIcon className="mr-2 text-lg sm:text-xl mt-1" />{' '}
                 {/* Quote Icon */}
                 <p className="text-sm sm:text-lg italic font-light">
                   {selectedStudent.saying}
